@@ -2,7 +2,7 @@
 
 export TERM=xterm
 
-if [ -z "`ls /vesta --hide='lost+found'`" ] 
+if [ -z "`ls /vesta --hide='lost+found'`" ]
 then
 	rsync -a /vesta-start/* /vesta
 fi
@@ -15,3 +15,4 @@ cd /etc/init.d/ && ./exim4 start
 cd /etc/init.d/ && ./apache2 start
 cd /etc/init.d/ && ./bind9 start
 cd /etc/init.d/ && ./dovecot start
+cd /etc/init.d/ && ./vsftpd start
